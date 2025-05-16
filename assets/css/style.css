@@ -1,0 +1,700 @@
+body {
+    font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background-color: #fff;
+    height: 200vh;
+    position: relative;
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: .3s all ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+body.offcanvas-menu:before {
+    opacity: 1;
+    z-index: 1002;
+    visibility: visible;
+}
+
+.navbar-brand img {
+    width: 13vh;
+}
+
+p {
+    color: #b3b3b3;
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+a {
+    transition: .3s all ease;
+}
+
+a, a:hover {
+    text-decoration: none !important;
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    padding: 0px 0;
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 30px 0;
+    }
+}
+
+header .navbar-brand {
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+header .navbar-brand.absolute {
+    position: absolute;
+}
+
+@media (max-width: 991.98px) {
+    header .navbar-brand.absolute {
+        position: relative;
+    }
+}
+
+header .navbar-brand span {
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    header .navbar-brand span {
+        color: #ced4da;
+    }
+}
+
+header .navbar {
+    background: #4244FE !important;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+@media (min-width: 768px) {
+    header .navbar {
+        padding-top: 0;
+        padding-bottom: 0;
+        background: none !important;
+        position: relative;
+    }
+}
+
+header .navbar .nav-link {
+    padding: 1.7rem 1rem;
+    outline: none !important;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8) !important; /* Default link color */
+}
+
+@media (max-width: 1199.98px) {
+    header .navbar .nav-link {
+        padding: .5rem 0rem;
+    }
+}
+
+header .navbar .nav-link:hover {
+    color: #fff !important; /* Change color on hover */
+}
+
+header .navbar .nav-link.active {
+    color: #fff !important; /* Active link color */
+}
+
+header .navbar .dropdown-menu {
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 2px 30px 0px rgba(0, 0, 0, 0.2);
+    min-width: 13em;
+    margin-top: -10px;
+}
+
+header .navbar .dropdown-menu:before {
+    bottom: 100%;
+    left: 10%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #fff;
+    border-width: 7px;
+}
+
+@media (max-width: 991.98px) {
+    header .navbar .dropdown-menu:before {
+        display: none;
+    }
+}
+
+header .navbar .dropdown-menu .dropdown-item:hover {
+    background: #007bff;
+    color: #fff;
+}
+
+header .navbar .dropdown-menu .dropdown-item.active {
+    background: #007bff;
+    color: #fff;
+}
+
+header .navbar .dropdown-menu a {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+header .navbar .cta-btn a {
+    background: #007bff;
+    color: #0E3D83 !important;
+    text-transform: uppercase;
+    font-size: .8rem;
+    padding: 15px 20px !important;
+    line-height: 1;
+    font-weight: bold;
+    transition: .3s all ease;
+}
+
+header .navbar .cta-btn a:hover {
+    background: #fff;
+    color: #007bff !important;
+    box-shadow: 2px 0 30px -5px rgba(0, 0, 0, 0.2);
+}
+
+.enroll-btn{
+  border-radius:20px ;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.486);
+
+}
+.header-main{
+  text-align: center;
+}
+.header-main h1{
+  /* font-size: 80px; */
+  font-size: clamp(2rem, 8vw, 4rem);
+  margin: auto;
+  width: 80%;
+  color: white;
+}
+.header-main p{
+  margin-top: 50px;
+  /* font-size: 2.5vh; */
+  font-size: 1.2rem;
+  color: white;
+}
+.header-main .laptop{
+  width: 48%;
+  margin-left: 5%;
+  /* border: solid black 1px; */
+}
+@media (max-width: 768px) {
+  .laptop{
+    width: 200%;
+    scale: 2;
+    position: absolute;
+      top: 34.5%;
+      left: 25%;
+  }
+}
+  .key-features {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 50px 0;
+        }
+        .feature {
+            text-align: center;
+            margin: 20px;
+        }
+        .feature-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #fff;
+            color: #4a90e2;
+            font-size: 48px;
+            line-height: 100px;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .feature-title {
+            font-size: 20px;
+            margin-top: 20px;
+            color: #333;
+        }
+        .feature-description {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+/* New Section for "What You'll Learn" */
+.learn-section {
+    
+    color: white;
+    padding: 50px 0;
+}
+
+.learn-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.learn-section .content {
+    max-width: 50%;
+    margin-top: 10%;
+}
+
+.learn-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.learn-section p {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.learn-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.learn-section li {
+    margin-bottom: 10px;
+}
+
+.learn-section .image {
+    max-width: 50%;
+}
+
+.cta-button {
+    background-color: #FCA7FC;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #ed7ced;
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 10px pink;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .learn-section .content,
+    .learn-section .image-container {
+      text-align: center;
+        max-width: 100%; /* Ensure full width on small screens */
+        margin-top: 0; /* Remove top margin on small screens */
+    }
+
+    .learn-section .image-stack img {
+        width: 100%; /* Ensure images take full width on small screens */
+    }
+
+    .learn-section h2 {
+        font-size: 28px; /* Reduce font size for better readability on smaller screens */
+    }
+
+    .learn-section p {
+        font-size: 16px; /* Reduce font size for better readability on smaller screens */
+    }
+}
+
+/* Course Objectives Section */
+.course-objectives {
+    padding: 50px 0;
+}
+
+.course-objectives .container {
+    display: flex;
+    flex-direction: column; /* Stack intro and main content vertically */
+    align-items: center;
+}
+
+.course-objectives .intro {
+    text-align: center;
+    margin-bottom: 50px; /* Add spacing between intro and main content */
+}
+
+.course-objectives h1 {
+    font-size: 48px;
+    color: #4a90e2; /* Purple color for the heading */
+    margin-bottom: 20px;
+}
+
+.course-objectives .intro p {
+    font-size: 16px;
+    color: #666;
+    max-width: 600px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+.course-objectives .image-container {
+    text-align: center;
+    position: relative; /* Ensure the image container takes full space */
+    height: 100%; /* Make the container take full vertical space */
+}
+
+.course-objectives .image-full {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove any extra spacing below the image */
+}
+
+.course-objectives .content {
+    max-width: 50%;
+}
+
+.course-objectives h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #4a90e2; /* Purple color for the heading */
+}
+
+.course-objectives h3 {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.course-objectives p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.course-objectives ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.course-objectives li {
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    background-color: #FCA7FC;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #ed7ced;
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 10px pink;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .course-objectives .image-container,
+    .course-objectives .content {
+        max-width: 100%; /* Ensure full width on small screens */
+        margin-top: 0; /* Remove top margin on small screens */
+    }
+
+    .course-objectives .image-full {
+        width: 100%; /* Ensure images take full width on small screens */
+    }
+
+    .course-objectives h1 {
+        font-size: 36px; /* Reduce font size for better readability on smaller screens */
+    }
+
+    .course-objectives h2 {
+        font-size: 28px; /* Reduce font size for better readability on smaller screens */
+    }
+
+    .course-objectives h3 {
+        font-size: 22px; /* Reduce font size for better readability on smaller screens */
+    }
+
+    .course-objectives p {
+        font-size: 16px; /* Reduce font size for better readability on smaller screens */
+    }
+}
+
+
+
+/* Get Instant Access Section */
+.instant-access {
+    padding: 50px 0;
+    position: relative; /* To allow positioning of background images */
+    background-color: #EFEFEF;
+    z-index: 0;
+    overflow: hidden;
+}
+.center-instant{
+  max-width: 80%;
+  margin: auto;
+}
+.instant-access .container {
+    max-width: 1200px; /* Adjust as needed */
+}
+
+.instant-access h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #4a90e2; /* Purple color for the heading */
+}
+
+.instant-access form {
+    background-color: transparent; /* No background for the form */
+}
+
+.instant-access .form-wide {
+    width: 100%; /* Ensure the form takes full width */
+}
+
+.instant-access .form-group {
+    margin-bottom: 15px;
+}
+
+.instant-access label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.instant-access input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.instant-access .cta-button {
+    background-color: #615EFE;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 120px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.instant-access .cta-button:hover {
+    background-color: #3b71ca;
+    color: white;
+    box-shadow: 0px 0px 10px #4a90e2;
+}
+
+/* Background Images */
+.instant-access .background-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place images behind the content */
+}
+
+.instant-access .image-left {
+    position: absolute;
+    left: -25%;
+    scale: 1.2;
+    top: 0%;
+    transform: translateY(-50%) rotate(0deg); /* Rotate slightly for effect */
+    max-width: 40%; /* Adjust size as needed */
+}
+
+.instant-access .image-right {
+    position: absolute;
+    right: 0;
+    left: 80%;
+    bottom: 0;
+    transform: rotate(10deg); /* Rotate slightly for effect */
+    max-width: 40%; /* Adjust size as needed */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .instant-access .image-left,
+    .instant-access .image-right {
+        display: none; /* Hide background images on small screens */
+    }
+
+    .instant-access h2 {
+        font-size: 28px; /* Reduce font size for better readability on smaller screens */
+    }
+
+    .instant-access .form-wide {
+        width: 100%; /* Ensure full width on small screens */
+    }
+}
+
+/* Footer Section */
+.footer {
+    background-color: #003366; /* Dark blue background */
+    color: white;
+    padding: 50px 0;
+}
+.footer-top-space{
+  margin-top: 40px;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .logo-section {
+    text-align: left;
+    /* margin-left: -100px; */
+    /* margin-right: 100px; */
+}
+
+.footer .logo {
+    max-width: 200px; /* Adjust logo size as needed */
+}
+
+.footer h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer li {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    /* text-decoration: underline; */
+    color: #003366;
+}
+
+.footer .social-icons {
+    font-size: 1px;
+    display: flex;
+    gap: 20px;
+}
+
+.footer .social-icons i {
+    font-size: 18px;
+}
+.footer .social-icons i:hover {
+    font-size: 20px;
+    color: #323086;
+}
+.footer p {
+    font-size: 12px;
+    margin: 20px;
+    color: #ffffff;
+}
+@media (max-width: 768px) {
+.footer .logo-section {
+    text-align: left;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.footer div{
+  margin-left: 10px;
+}
+}
+
+
+
+
+
+
+
+
+.floating-element {
+   
+
+    /* text-align: center; */
+
+    animation: float 9s infinite ease-in-out; /* Apply the floating animation */
+}
+
+/* Floating Animation */
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0); /* Start and end at the original position */
+    }
+    25% {
+        transform: translateY(-20px) translateX(10px); /* Move up and to the right */
+    }
+    50% {
+        transform: translateY(0) translateX(20px); /* Descend back to the original vertical position while shifting further right */
+    }
+    75% {
+        transform: translateY(20px) translateX(10px); /* Move down and slightly to the left */
+    }
+}
+/* Optional: Hover Effect */
+/* .floating-element:hover {
+    
+} */
+ 
+
+.floating-element img:not(:first-child) {
+  animation-delay: calc(var(--delay) * var(--index)); /* Delay each animation */
+}
