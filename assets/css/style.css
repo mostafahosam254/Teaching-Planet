@@ -308,7 +308,7 @@ header .navbar .cta-btn a:hover {
 
 .cta-button {
     background-color: #FCA7FC;
-    color: rgb(0, 0, 0);
+    color: #003366;
     border: none;
     padding: 10px 20px;
     border-radius: 25px;
@@ -512,7 +512,7 @@ header .navbar .cta-btn a:hover {
     margin-bottom: 5px;
 }
 
-.instant-access input {
+.instant-access input,.instant-access select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -641,7 +641,7 @@ header .navbar .cta-btn a:hover {
     font-size: 18px;
 }
 .footer .social-icons i:hover {
-    font-size: 20px;
+
     color: #323086;
 }
 .footer p {
